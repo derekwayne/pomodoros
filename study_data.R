@@ -42,4 +42,6 @@ ggplot(data=study2, aes(x=Week, y=study_hours)) + geom_line(color="#3e5f6c", siz
   geom_text(data=d, mapping=aes(x=date, y=0, label=event), size=4, angle=90, vjust=-0.4, hjust=0) +
   labs(title = "Pomodoro Hours", x="Date", y="Hours") +
   theme_bw()
+
+ggsave("pomodoro_time.png")
        

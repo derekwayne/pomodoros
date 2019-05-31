@@ -1,1 +1,3 @@
-![Pomodoro Visualization](pomodoro_time.png)
+# Tracking Pomodoro Study Time
+
+![](pomodoro_time.png)
