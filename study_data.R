@@ -31,11 +31,11 @@ study$Week <- floor_date(study$Date, "week")
 study2 <- aggregate(study_hours ~ Week, data=study, FUN=sum)
 
 d <- data.frame(
-  date = as.Date(c("2017-09-08", "2018-09-8", "2018-12-18", "2019-05-01")),
-  event = c("Third Year", "Fourth Year", "Christmas Break","Vacation")
+  date = as.Date(c("2017-09-08", "2018-04-23", "2018-09-8", "2018-12-18", "2019-05-01")),
+  event = c("Third Year", "Summer Break", "Fourth Year", "Christmas Break","Vacation")
 )
 
-ggplot(data=study2, aes(x=Week, y=study_hours)) + geom_line(color="#3e5f6c", size=1.2, alpha=0.7) +
+ggplot(data=study2, aes(x=Week, y=study_hours)) + geom_line(color="#3e5f6c", size=1.2, alpha=0.6) +
   scale_x_date(date_labels = "%b %Y", breaks = pretty(study2$Week, n=12)) +
   stat_smooth(color="#da7d48", fill = "#FC4E07", method = "loess", se=F) +
   geom_vline(data=d, mapping=aes(xintercept=date), color="#c93d55", size=1.2, alpha = 0.7) +
