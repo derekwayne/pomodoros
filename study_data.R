@@ -40,7 +40,7 @@ ggplot(data=study2, aes(x=Week, y=study_hours)) + geom_line(color="#3e5f6c", siz
   stat_smooth(color="#da7d48", fill = "#FC4E07", method = "loess", se=F) +
   geom_vline(data=d, mapping=aes(xintercept=date), color="#c93d55", size=1.2, alpha = 0.7) +
   geom_text(data=d, mapping=aes(x=date, y=0, label=event), size=4, angle=90, vjust=-0.4, hjust=0) +
-  labs(title = "Pomodoro Hours", x="Date", y="Hours") +
+  labs(title = "Pomodoro Hours", x="Date", y="Hours/Week") +
   theme_bw()
 
 ggsave("pomodoro_time.png")
